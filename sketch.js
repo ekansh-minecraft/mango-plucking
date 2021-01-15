@@ -100,12 +100,14 @@ function detectCollision(stoneObj,mangoObj)
 
   function mouseDragged()
   {
+    console.log("Mouse dragged")
       Matter.Body.setPosition(stone.body,{x:mouseX,y:mouseY})
   }
 
   function mouseReleased()
   {
     console.log("Mouse release called")
+    // Matter.Body.setStatic(stone.body,false)
     chain.fly()
   }
 
